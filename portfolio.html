@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Showcase of projects, skills, and experiences">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef5ff;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro {
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .scrollable-section {
+            height: 300px; /* Adjust the height as needed */
+            overflow-y: scroll;
+            padding-right: 20px; /* To prevent the scrollbar from overlapping content */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .scrollable-section p {
+            padding: 10px;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project {
+            padding: 20px;
+            background: #d6e4ff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #003f8a;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+            background-color: #003f8a;
+            color: white;
+            font-size: 1.5rem;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner video {
+            width: 100%;
+            max-height: 400px; /* Adjust the max height as needed */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 0px;
+        }
+
+        .team {
+            margin-top: 30px;
+        }
+
+        /* Flip Card Styles */
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 90%;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+        }
+
+        .flip-card-front {
+            background-color: #d6e4ff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flip-card-front img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .flip-card-back {
+            background-color: #003f8a;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .flip-card-back h3 {
+            margin: 10px 0 5px;
+        }
+
+        footer {
+            background: #003f8a;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .team-members {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="rr.png" alt="RemoteWork Solutions Logo">
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="contact.html" class="btn-primary">Sign In</a>
+                <a href="services.html" class="btn-secondary">Search</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="intro">
+            <p>
+                Welcome to my portfolio! Here, you can explore my professional journey, projects, and the skills I bring to the table.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <center><h2>Projects</h2></center>
+        
+        <div class="scrollable-section">
+            <p>Here are our projects we have served so far</p>
+            <p>Remote Job Marketplace: Build a platform that connects remote job seekers with companies offering remote or hybrid roles. The site can feature advanced filtering options for location, job type, and salary expectations, as well as tools for applicants to upload resumes and apply directly.</p>
+
+            <p>Team Collaboration Hub: Develop a platform designed for hybrid teams to collaborate seamlessly. It can integrate video conferencing, task management, and shared document editing tools, all under one roof.</p>
+            <p>Virtual Office Tour: Create a platform that lets remote teams simulate an office environment virtually. Employees can navigate virtual workspaces, join meetings, or visit "social lounges" for casual interactions</p>
+            <p>Remote Work Productivity Tracker: A web app that tracks and boosts productivity for remote workers. It allows users to set goals, monitor time spent on tasks, and gain insights into their daily work habits.</p>
+           
+        </div>
+    </section>
+
+    <!-- Banner Section with Video -->
+    <section class="banner">
+        <video autoplay muted loop>
+            <source src="5384977-uhd_4096_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Discover more about our talented team and how we make things happen!</p>
+    </section>
+
+    <section id="team" class="team">
+        
+        <center><h2>Meet the Team</h2></center>
+        <div class="team-members">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="rohan.jpeg" alt="Photo of Team Member One">
+                        <h3>Rohan Kumar</h3>
+                        <p>Developer</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Rohan kumar</h3>
+                        <p>Role: Developer</p>
+                        <p>Skills: HTML, CSS, JavaScript, React</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="rahul kumar.jpeg" alt="Photo of Team Member Two">
+                        <h3>Rahul Kumar</h3>
+                        <p>Designer</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Rahul Kumar</h3>
+                        <p>Role: Designer</p>
+                        <p>Skills: Photoshop, Figma, UI/UX Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="jiya.jpeg" alt="Photo of Team Member Three">
+                        <h3>Jiya Kumari</h3>
+                        <p>Project Manager</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Jiya Kumari</h3>
+                        <p>Role: Project Manager</p>
+                        <p>Skills: Project Management, Agile Methodologies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="alizay.jpeg" alt="Photo of Team Member Four">
+                        <h3>Alizay</h3>
+                        <p>HR</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Alizay</h3>
+                        <p>Role: HR</p>
+                        <p>Skills: Recruitment, Employee Relations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 My Portfolio. All rights reserved.
+    </footer>
+</body>
+</html>
